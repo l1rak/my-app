@@ -36,7 +36,7 @@ Once the server is running, navigate to http://localhost:3000/ to view the appli
 
 ## Time Spent
 
-The test took a total of 12 hours to complete. The biggest challenges were fetching the cities and using the material UI library to render the pre-built components. When clicking on the countries name the page doesn't redirect correctly but if you enter the page again it will show the information. I managed to show the countries flag image but couldn't manage to show the information about the continent or the cities befcause I had problems with getting the response back so probably the problem is in the parameters because I think the logic on defining the routes is correct.
+The test took a total of 12 hours to complete. The biggest challenges were fetching the cities and using the material UI library to render the pre-built components. When clicking on the countries name the page doesn't redirect correctly but if you enter the page again it will show the information. I managed to show the countries flag image but couldn't manage to show the information about the continent or the cities befcause I had problems with getting the response back where I think the problem is in the parameters because I think the logic on defining the routes is correct. I was testing the routes on postman and they were working correctly but I had issues with getting responses on the page. The components can be found on /src components.
 
 ## Contributors
 
