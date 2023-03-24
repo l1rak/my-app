@@ -14,6 +14,7 @@ import {
 } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
 
+// Declare styles using the makeStyles hook
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -27,10 +28,12 @@ const useStyles = makeStyles({
   }
 });
 
+ // define countries component
 function Countries() {
   const classes = useStyles();
   const [countries, setCountries] = useState([]);
 
+  // Use the useEffect hook to fetch data from the API when the component mounts
   useEffect(() => {
     axios({
       method: 'get',
@@ -50,6 +53,7 @@ function Countries() {
     });
   }, []);
   
+  // Render the table of countries using Material UI components
   return (
     <div>
       <Typography variant="h4" gutterBottom>
