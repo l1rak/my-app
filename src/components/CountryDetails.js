@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { withRouter } from 'react-router-dom';
 import {
   Typography,
+  Link,
   makeStyles
 } from '@material-ui/core';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles({
   flag: {
@@ -40,21 +41,29 @@ function CountryDetails({ match }) {
 
   return (
     <div>
+      
+      {/* Add back button to redirect to the previous page */}
+      <RouterLink to="/">
+        <Typography>Back</Typography>
+      </RouterLink>
+      
       <Typography variant="h4" gutterBottom>
         {countryDetails.name}
       </Typography>
       <img src={countryDetails.flag} alt={countryDetails.name} className={classes.flag} />
       <Typography variant="body1" gutterBottom>
-        Code: {countryDetails.code}
+        Continent: {countryDetails.continent ? countryDetails.continent : 'N/A'}
       </Typography>
-      <Typography variant="body1" gutterBottom>
-        Capital: {countryDetails.capital ? countryDetails.capital : 'N/A'}
-      </Typography>
-      <Typography variant="body1" gutterBottom>
-        Currency: {countryDetails.currencyCode ? countryDetails.currencyCode : 'N/A'}
-      </Typography>
+      <Typography variant="body1" gutterBottom>Cities:</Typography>
+      <ul>
+        {/* consume API to display a list of cities in the country */}
+      </ul>
+      <Typography variant="body1" gutterBottom>Related countries by continent:</Typography>
+      <ul>
+        {/* create links to other countries on the same continent */} 
+      </ul>
     </div>
   );
 }
 
-export default withRouter(CountryDetails);
+export default CountryDetails;
